@@ -1,14 +1,24 @@
-"use client"
-import styled from "styled-components";
+const url = process.env.NEXT_API_URL;
 
-const Wrapper = styled.main`
-  border:1rem solid red;
-`;
+async function getPosts() {
+    const res = await fetch(url as string);
+    const json = await res.json();    
+    return json;
+}
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPosts();
+
   return (
-    <Wrapper>
-      <h1>123</h1>
-    </Wrapper>
-  );
+      <div className="center-content">
+        <h1>메인 페이지</h1>
+        {
+          posts.map((post, index) => (
+            <li key={index}>
+              {post.title}
+            </li>
+          ))
+        }
+      </div>
+    );
 }
