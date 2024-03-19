@@ -1,6 +1,5 @@
 import Header from '@/components/Header';
 import './globals.css'
-import StyledComponentsRegistry from '@/lib/registry';
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -8,10 +7,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <>
       <html>
         <body>
-          <StyledComponentsRegistry>
-            <Header/>
-            {children}
-          </StyledComponentsRegistry>
+          <Header/>
+          {children}
         </body>
       </html>
     </>
