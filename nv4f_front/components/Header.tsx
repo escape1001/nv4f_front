@@ -3,10 +3,12 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <main>
-      <nav className="center-content">
-        <Link href="/">메인 페이지</Link>
-        <ul>
+    <header className="bg-color-point text-color-light">
+      <nav className="center-content flex justify-between items-center py-4">
+        <h1 className="text-bigger font-semibold">
+          <Link href="/">메인 페이지</Link>
+        </h1>
+        <ul className="flex gap-4">
           <li>
             <Link href="#">로그인</Link>
           </li>
@@ -15,6 +17,6 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-    </main>
+    </header>
   );
 }
