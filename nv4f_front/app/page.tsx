@@ -1,28 +1,17 @@
-const url = process.env.NEXT_API_URL;
+"use client";
+import Postfilter from "@/components/PostFilter";
+import PostList from "@/components/PostList";
+import { useState } from "react";
 
-async function getPosts() {
-    const res = await fetch(url as string);
-    const json = await res.json();    
-    return json;
-}
 
-export default async function Home() {
-  const posts = await getPosts();
+export default function Home() {
+  const [filterQuery, setFilterQuery] = useState("");
 
   return (
     <main className="pt-20">
       <div className="center-content">
-        <h1>메인 페이지</h1>
-        <ul>
-          {
-            posts.map((post, index) => (
-              <li key={index}>
-                <img src={url+post.thumbnail_image}/>
-                {post.title}
-              </li>
-            ))
-          }
-        </ul>
+        <Postfilter setFilterQuery={setFilterQuery}/>
+        <PostList filterQuery={filterQuery}/>
       </div>
     </main>
     );

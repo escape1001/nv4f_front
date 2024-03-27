@@ -103,12 +103,10 @@ a{
   width:100%;
   max-width:864px;
   margin:0 auto;
-  height: 100%;
-  overflow: hidden;
-  overflow-y: auto;
+  min-height: 100%;
 }
 
-.hide{
+.ir-hidden{
   position: absolute;
   left:-9999px;
   width:0;

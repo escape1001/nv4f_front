@@ -18,8 +18,8 @@ module.exports = {
       fontSize: {
         'max': '3.6rem',
         'huge': '2.8rem',
-        'bigger': '2.4rem',
-        'big': '2rem',
+        'bigger': '2rem',
+        'big': '1.8rem',
         'default': '1.6rem',
         'small': '1.4rem',
         'smaller': '1.2rem',
