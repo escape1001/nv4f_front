@@ -29,7 +29,7 @@ export default  function PostList({filterQuery}:{filterQuery:string}) {
             //box shadow 추가
             <li key={index} className="shadow-md w-[calc((100%_-_2rem)_/_3)] rounded-lg overflow-hidden group">
               <Link href={`post_detail/${post.id}`}>
-                <p className="aspect-video ">
+                <p className="aspect-video overflow-hidden">
                   <img 
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform ease-in-out duration-300"
                     src={base_url+post.thumbnail_image} alt=""
