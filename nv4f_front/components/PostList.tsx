@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 
-export default  function PostList({filterQuery}:{filterQuery:string}) {
+export default function PostList({filterQuery}:{filterQuery:string}) {
   const base_url = process.env.NEXT_PUBLIC_API_URL;
   const [posts, setPosts] = useState<PostType[]>([]);
   
