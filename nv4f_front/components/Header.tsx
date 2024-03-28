@@ -10,10 +10,10 @@ export default function Header() {
         </h1>
         <ul className="flex gap-4">
           <li>
-            <Link href="#">로그인</Link>
+            <Link href="/accounts/login/">로그인</Link>
           </li>
           <li>
-            <Link href="#">회원가입</Link>
+            <Link href="/accounts/signup/">회원가입</Link>
           </li>
         </ul>
       </nav>
